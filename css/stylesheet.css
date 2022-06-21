@@ -1,6 +1,6 @@
 html{
     height: auto;
-    /*width: 100%;*/
+    
 }
 
 
@@ -10,9 +10,9 @@ body{
     background-size: cover;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 	margin:0px;
-    /*width: 100%;*/
+   
     height: auto;    
-    display:grid;
+    display:grid;/*Desafio Grid*/
 }
 img{
     
@@ -29,12 +29,12 @@ nav{
 ul{
     list-style: none; 
     text-align: center; 
-    display:flex;/*Solucion a desafio clase 6*/
-    flex-direction: row;/*Solucion a desafio clase 6*/
-    justify-content: flex-end;/*Solucion a desafio clase 6*/
-    margin-top: 20px;
-    margin-bottom: 0px;
-	padding:0px;
+    display:flex;/*Solucion a desafio clase Flexbox*/
+    flex-direction: row;/*Solucion a desafio clase Flexbox*/
+    justify-content: flex-end;/*Solucion a desafio clase Flexbox*/
+    margin-top: 20px; /*Box Modeling*/
+    margin-bottom: 0px;/*Box Modeling*/
+	padding:0px;/*Box Modeling*/
 	font-size:smaller;
 	
 	
@@ -44,16 +44,16 @@ ul{
 
 #seccionrecetas{
 
-    display: flex; /*solucion desafio clase 6*/
-    flex-direction: row;/*Solucion a desafio clase 6*/
-    justify-content: center;/*Solucion a desafio clase 6*/
-    flex-wrap: nowrap;/*Solucion a desafio clase 6*/
+    display: flex; /*solucion desafio clase Flexbox*/
+    flex-direction: row;/*Solucion a desafio Flexbox*/
+    justify-content: center;/*Solucion a desafio clase Flexbox*/
+    flex-wrap: nowrap;/*Solucion a desafio clase Flexbox*/
 
 }
 
-#wrapper{
+#wrapper{ 
 
-    display: grid;
+    display: grid; /
 	grid-template-areas: 
 
 		"miheader"
@@ -64,20 +64,19 @@ ul{
 	grid-template-rows:  auto 1fr 60px;
 	grid-row-gap: 5px;
 	grid-column-gap: auto;
-    /*width: 100%;*/
     height: 100vh;
 
 
 }
 
-aside {
+aside { /*Desafio Grid*/
     grid-area: publicidad;
     display: none;
     visibility: hidden;
     background-color: lightblue;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) { /*Desafio Media Query*/
     #wrapper {
         grid-template-areas:
            "miheader miheader"
@@ -102,20 +101,20 @@ aside {
 	}
 }
 
-section#publicidad{
+section#publicidad{ /*Desafio Grid*/
     grid-area: publicidad;
     
     visibility: visible;
 }
 
-section#general{
+section#general{ /*Desafio Grid*/
 	grid-area: general;
     display: flex;
     flex-direction: column;
 }
 
 
-header,footer {
+header,footer { /*Desafio Grid*/
 	grid-area:  miheader;
     padding-top: 12px;
 	background-color: rgb(0,0,0,0.05);
