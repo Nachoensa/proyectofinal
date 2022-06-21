@@ -1,0 +1,257 @@
+html{
+    height: auto;
+    /*width: 100%;*/
+}
+
+
+body{
+    
+    background-image: url(../imagenes/fondo.jpg);
+    background-size: cover;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	margin:0px;
+    /*width: 100%;*/
+    height: auto;    
+    display:grid;
+}
+img{
+    
+	border-radius: 15px;
+    width: 150px;
+    height:150px;
+    ;
+}
+
+nav{
+    
+    align-self: center;
+}
+ul{
+    list-style: none; 
+    text-align: center; 
+    display:flex;/*Solucion a desafio clase 6*/
+    flex-direction: row;/*Solucion a desafio clase 6*/
+    justify-content: flex-end;/*Solucion a desafio clase 6*/
+    margin-top: 20px;
+    margin-bottom: 0px;
+	padding:0px;
+	font-size:smaller;
+	
+	
+  
+    
+}
+
+#seccionrecetas{
+
+    display: flex; /*solucion desafio clase 6*/
+    flex-direction: row;/*Solucion a desafio clase 6*/
+    justify-content: center;/*Solucion a desafio clase 6*/
+    flex-wrap: nowrap;/*Solucion a desafio clase 6*/
+
+}
+
+#wrapper{
+
+    display: grid;
+	grid-template-areas: 
+
+		"miheader"
+		"general"
+		"mifooter";
+
+	grid-template-columns:  1fr;
+	grid-template-rows:  auto 1fr 60px;
+	grid-row-gap: 5px;
+	grid-column-gap: auto;
+    /*width: 100%;*/
+    height: 100vh;
+
+
+}
+
+aside {
+    grid-area: publicidad;
+    display: none;
+    visibility: hidden;
+    background-color: lightblue;
+}
+
+@media screen and (min-width: 992px) {
+    #wrapper {
+        grid-template-areas:
+           "miheader miheader"
+           "general publicidad"
+           "mifooter mifooter"
+     ;
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows:  auto 1fr 60px;
+        grid-row-gap: 50px;
+        grid-column-gap: auto;
+        width: 100%;
+        height: 100vh;
+    }
+    aside{
+        
+        display: block;
+        visibility: visible;
+        
+    }
+	ul{
+		font-size:inherit;
+	}
+}
+
+section#publicidad{
+    grid-area: publicidad;
+    
+    visibility: visible;
+}
+
+section#general{
+	grid-area: general;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header,footer {
+	grid-area:  miheader;
+    padding-top: 12px;
+	background-color: rgb(0,0,0,0.05);
+	border-bottom: 1px solid #eee;
+    display:grid;
+}
+
+footer {
+	grid-area: mifooter;
+    text-align: center;
+    /*position: relative;*/
+    bottom: 0;
+    margin-top: auto;
+    width: 100%;
+    display:grid;
+   
+}
+li{
+    
+    text-decoration: none;
+    padding: 5px;
+}
+div{
+    display: flex;
+    justify-content: center;
+    /*align-items: flex-start;*/
+    
+}
+
+.h1text{
+    text-align:center;
+}
+.formstyle{
+    margin-top: 50px;
+}
+.text__box{
+    border:solid 5px cadetblue;
+    text-align: center;
+	margin-top: 100px;
+}
+.encabezado__box{
+
+    border-bottom: 5px cadetblue;
+    display: flex;
+    justify-content:center;
+}
+
+p{
+    font-family: 'Oswald', sans-serif;
+}
+
+table{ 
+    display: flex;
+    justify-content:  center;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+td,th{ 
+    text-align: center;
+    border: 1px solid black;
+	padding: 3px 6px;
+}
+th{
+	text-align: center;
+    color: white;
+	background-color: darkturquoise;
+}	
+	
+.caja{
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 50px;
+    position: relative;
+    /*display: inline-block;*/
+    background-size: cover;
+    margin-bottom: 30px;
+
+}
+.textizq{
+    display:block;
+    text-align:left ;
+}
+.cajas{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.text1{
+    border-radius: 15px;
+    background-color: black;
+    opacity: 70%;
+    width: 148px;
+    text-shadow: 5px 1px 10px black;
+    height:149px;
+    display: none;   /* (display: none) lo que hace es que inicialmente no aparezca el texto, aparece despues con el hover*/ 
+    position: absolute;
+    top:0px;
+    left:0;
+    padding:2px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:white;
+}
+.textfooter {
+
+    font-size: 11px;
+    font-weight: bold;
+    font-style: oblique;
+    
+}
+.caja:hover .text1 {
+    display: inline-grid ;
+    align-items:center;
+}
+.caja:hover{
+    box-shadow: 0px 0px 5px black;  /*cuando se posa el mouse sobre la imagen demarca una sombra*/
+    
+}
+.hover {
+  --s: 0.1em;   /* ancho de línea */
+  --c: #1095c1; /* Color */
+  
+  color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+.hover:hover {
+  --_p: 100%
+}  
