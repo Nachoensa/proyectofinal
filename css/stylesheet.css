@@ -137,11 +137,14 @@ aside {
 }
 
 #grad{
-    background-image: linear-gradient(to right, #3DFFA8, #3DBEE3, #5067FB);
+    background-image: linear-gradient(to right, #3DFFA8, #3DBEE3, #5067FB); /* Para ejercicios clase 10*/
+}
+
+#grad2{
+    background-image: linear-gradient(to left,#5067FB,#3DBEE3,#3DFFA8,#5067FB ); /* para ejercicio clase 10*/
 }
 
 
-}
 
 section#publicidad{
     grid-area: publicidad;
