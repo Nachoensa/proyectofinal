@@ -26,6 +26,8 @@ nav{
     
     align-self: center;
 }
+
+
 ul{
     list-style: none; 
     text-align: center; 
@@ -36,11 +38,43 @@ ul{
     margin-bottom: 0px;
 	padding:0px;
 	font-size:smaller;
-	
-	
-  
-    
+
 }
+
+
+.afclogoanimado{   /*EJERCICIO PARA CLASE 10*/
+
+    animation: afcanimado 3s linear 0s 1 reverse forwards;
+}
+
+@keyframes afcanimado { /*EJERCICIO PARA CLASE 10*/
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
 
 #seccionrecetas{
 
@@ -102,6 +136,13 @@ aside {
 	}
 }
 
+#grad{
+    background-image: linear-gradient(to right, #3DFFA8, #3DBEE3, #5067FB);
+}
+
+
+}
+
 section#publicidad{
     grid-area: publicidad;
     
@@ -152,10 +193,13 @@ div{
     margin-top: 50px;
 }
 .text__box{
+    
     border:solid 5px cadetblue;
     text-align: center;
 	margin-top: 100px;
 }
+
+
 .encabezado__box{
 
     border-bottom: 5px cadetblue;
